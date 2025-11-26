@@ -1,0 +1,5 @@
+rdkit
+torch
+networkx
+tqdm
+numpy

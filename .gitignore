@@ -1,6 +1,5 @@
 *.pyc
 *model.iter*
-data/
 *LOG*
 results*
 model.*

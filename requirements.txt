@@ -3,3 +3,5 @@ torch
 networkx
 tqdm
 numpy
+pandas
+chembl_webresource_client

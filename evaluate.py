@@ -20,7 +20,7 @@ parser.add_argument("--vocab", required=True)
 parser.add_argument("--atom_vocab", default=common_atom_vocab)
 parser.add_argument("--model", required=True)
 parser.add_argument("--test", required=True, help="Path to test.txt")
-parser.add_argument("--output_dir", type=str, default="./evaluation_results")
+parser.add_argument("--output_dir", type=str, default="./Part_A")
 parser.add_argument("--seed", type=int, default=7)
 
 parser.add_argument("--rnn_type", type=str, default="LSTM")

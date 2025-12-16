@@ -179,7 +179,7 @@ class HierMPNDecoder(nn.Module):
             assm_cxt = index_select_ND(src_graph_vecs, 0, batch_idx)
         return (self.W_assm(assm_vecs) * assm_cxt).sum(dim=-1)
 
-    def forward(self, src_mol_vecs, graphs, tensors, orders):
+    def forward(self, src_mol_vecs, graphs, tensors, orders, probe_mode=False):
         batch_size = len(orders)
         tree_batch, graph_batch = graphs
         tree_tensors, graph_tensors = tensors
@@ -206,12 +206,21 @@ class HierMPNDecoder(nn.Module):
         )
 
         all_topo_preds, all_cls_preds, all_assm_preds = [], [], []
+        
+        # PROBE COLLECTION
+        all_hidden_states = [] # list of (step, batch_idx, hidden_vector)
+
         new_atoms = []
         tree_scope = tree_tensors[-1]
         for i in range(batch_size):
             root = tree_batch.nodes[tree_scope[i][0]]
             clab, ilab = self.vocab[root["label"]]
             all_cls_preds.append((init_vecs[i], i, clab, ilab))  # cluster prediction
+            
+            if probe_mode:
+                # Capture Step 0 (Root)
+                all_hidden_states.append( (0, i, init_vecs[i].detach().cpu()) )
+
             new_atoms.extend(root["cluster"])
 
         subgraph = self.update_graph_mask(graph_batch, new_atoms, hgraph)
@@ -279,6 +288,12 @@ class HierMPNDecoder(nn.Module):
                 clab, ilab = self.vocab[tree_batch.nodes[yid]["label"]]
                 mess_idx = tree_batch[xid][yid]["mess_idx"]
                 hmess = self.rnn_cell.get_hidden_state(htree.mess)
+                
+                # PROBE POINT
+                if probe_mode:
+                    # t+1 because 0 was root
+                    all_hidden_states.append( (t+1, i, hmess[mess_idx].detach().cpu()) )
+
                 all_cls_preds.append(
                     (hmess[mess_idx], i, clab, ilab)
                 )  # cluster prediction using message
@@ -309,6 +324,9 @@ class HierMPNDecoder(nn.Module):
                     )  # the label is always the first of assm_cands
 
             subgraph = self.update_graph_mask(graph_batch, new_atoms, hgraph)
+
+        if probe_mode:
+            return all_hidden_states
 
         topo_vecs, batch_idx, topo_labels = zip_tensors(all_topo_preds)
         topo_scores = self.get_topo_score(src_tree_vecs, batch_idx, topo_vecs)

@@ -54,7 +54,9 @@ print(args)
 torch.manual_seed(args.seed)
 random.seed(args.seed)
 
-vocab = [x.strip("\r\n ").split() for x in open(args.vocab)]
+# Read vocab with UTF-8 BOM support (utf-8-sig) and skip blanks
+with open(args.vocab, 'r', encoding='utf-8-sig') as vf:
+    vocab = [x.strip("\r\n ").split() for x in vf if x.strip()]
 args.vocab = PairVocab(vocab)
 
 model = HierVAE(args).cuda()

@@ -1,0 +1,15 @@
+Metric,Value
+Total Molecules,408
+Valid Reconstructions,386
+Validity Rate (%),94.61
+Exact Matches (valid),0
+Exact Match Rate (%),0.00
+Mean Tanimoto (valid),0.1798
+Std Tanimoto (valid),0.1533
+Min Tanimoto (valid),0.0225
+Max Tanimoto (valid),1.0000
+Mean Δ Atoms (valid),1.23
+Mean Δ Bonds (valid),1.45
+Mean Δ Rings (valid),0.23
+Mean Δ Aromatic (valid),0.49
+Mean Δ Heteroatoms (valid),-0.26

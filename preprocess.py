@@ -50,7 +50,7 @@ if __name__ == "__main__":
     parser.add_argument("--ncpu", type=int, default=8)
     args = parser.parse_args()
 
-    with open(args.vocab) as f:
+    with open(args.vocab, encoding="utf-8-sig") as f:
         vocab = [x.strip("\r\n ").split() for x in f]
     args.vocab = PairVocab(vocab, cuda=False)
 

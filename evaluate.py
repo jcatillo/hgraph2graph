@@ -65,7 +65,7 @@ def canonicalize(sm):
 # compute fingerprint
 def fp(sm):
     m = Chem.MolFromSmiles(sm)
-    return AllChem.GetMorganFingerprintAsBitVect(m, 2, nBits=2048) if m else None
+    return AllChem.GetMorganFingerprintAsBitVect(m, 2, nBits=4096) if m else None
 
 # compute tanimoto similarity
 def tanimoto(a,b):

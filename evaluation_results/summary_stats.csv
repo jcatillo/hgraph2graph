@@ -4,8 +4,8 @@ Valid Reconstructions,386
 Validity Rate (%),94.61
 Exact Matches (valid),0
 Exact Match Rate (%),0.00
-Mean Tanimoto (valid),0.1798
-Std Tanimoto (valid),0.1533
+Mean Tanimoto (valid),0.1716
+Std Tanimoto (valid),0.1547
 Min Tanimoto (valid),0.0225
 Max Tanimoto (valid),1.0000
 Mean Δ Atoms (valid),1.23

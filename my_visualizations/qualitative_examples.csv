@@ -1,11 +1,11 @@
 ID,Input_SMILES,Output_SMILES,Tanimoto,Interpretation
 31,CC(C)[C@H](N)c1cccc(F)c1N1CCN(C(=O)[C@@H]2NCC[C@@H]2c2ccc(Cl)cc2)CC1,CC(C)C(N)c1cccc(F)c1N1CCN(C(=O)C2NCCC2c2ccc(Cl)cc2)CC1,1.0000,Perfect fingerprint match (1.000): Structurally identical or only stereochemistry differs.
 314,O=C(O)CCCCCC(=O)N1CCC2(CCN(c3ccncc3)CC2)C1,O=C(O)CCCCCCC(=O)N1CCC2(CCN(c3ccncc3)CC2)C1,1.0000,Perfect fingerprint match (1.000): Structurally identical or only stereochemistry differs.
-81,Nc1nc(N)c2c(n1)CCC(Cc1cccc(OC(F)(F)F)c1)C2,Nc1nc(N)c2c(n1)CCC(Cc1ccc(OC(F)(F)F)cc1)C2,0.8039,High similarity (0.804): Minor structural rearrangements.
-17,Cc1cc(C(=O)N2CCCCc3ccccc32)ccc1CNC(=O)N1CC(=O)C[C@H]1C(=O)N(C)C,Cc1cc(C(=O)N2CCCCc3ccccc32)ccc1CNC(=O)N1CCCC1C(=O)N(C)C,0.8000,High similarity (0.800): Minor structural rearrangements.
-29,O=C(O)CC(=O)N1CCC(C(=O)N2CCC3(CC2)CCN(c2ccncc2)C3)CC1,O=C(O)CCCCCCC(=O)N1CCC2(CCN(c3ccncc3)CC2)C1,0.5345,Moderate similarity (0.534): Significant rearrangements present.
-53,CNc1ncnc2c1ncn2Cc1ccccc1C(F)(F)F,CNc1ncnc2c1ncn2Cc1c(F)cccc1Cl,0.5455,Moderate similarity (0.545): Significant rearrangements present.
-247,O=C(N[C@H]1CCCCN(Cc2ccccc2)C1=O)N1CCC(N2Cc3ccccc3NC2=O)CC1,O=C(c1ccc(Cl)cc1)C(O)(Cn1cncn1)c1ccc(Cl)cc1,0.1176,Low similarity (0.118): Major reconstruction errors.
+17,Cc1cc(C(=O)N2CCCCc3ccccc32)ccc1CNC(=O)N1CC(=O)C[C@H]1C(=O)N(C)C,Cc1cc(C(=O)N2CCCCc3ccccc32)ccc1CNC(=O)N1CCCC1C(=O)N(C)C,0.7887,High similarity (0.789): Minor structural rearrangements.
+125,Cc1cc(C(=O)N2CCCC(C)c3ccccc32)ccc1CNC(=O)N1CCC[C@H]1C(=O)N(C)C,Cc1cc(C(=O)N2CCCCc3ccccc32)ccc1CNC(=O)N1CCCC1C(=O)N(C)C,0.7714,High similarity (0.771): Minor structural rearrangements.
+29,O=C(O)CC(=O)N1CCC(C(=O)N2CCC3(CC2)CCN(c2ccncc2)C3)CC1,O=C(O)CCCCCCC(=O)N1CCC2(CCN(c3ccncc3)CC2)C1,0.5424,Moderate similarity (0.542): Significant rearrangements present.
+138,CN1CCN(C2=Nc3cc(Cl)ccc3N(NC(=O)C3CCCCC3)c3ccccc32)CC1,CN1CCN(C2=Nc3ccccc3Nc3ccc(Cl)cc32)CC1,0.4265,Low similarity (0.426): Major reconstruction errors.
+247,O=C(N[C@H]1CCCCN(Cc2ccccc2)C1=O)N1CCC(N2Cc3ccccc3NC2=O)CC1,O=C(c1ccc(Cl)cc1)C(O)(Cn1cncn1)c1ccc(Cl)cc1,0.0899,Low similarity (0.090): Major reconstruction errors.
 49,Cc1cc(C)cc(Sc2cncc3sc(C(N)=O)cc23)c1,Cc1ccccc1C(=O)N1CCC(C(=O)Nc2ccc(S(=O)(=O)N3CCCCC3)cc2)CC1,0.0854,Low similarity (0.085): Major reconstruction errors.
-328,O=C(c1ccc(Cl)c(S(=O)(=O)N2CCCCCC2)c1)N1CCN(c2ccccc2O)CC1,O=C(c1ccc(Cl)cc1)C(O)(Cn1cncn1)c1ccc(Cl)cc1,0.1486,Low similarity (0.149): Major reconstruction errors.
-339,CCCOC(=O)c1cc(OC)c(CC(C)N)cc1OC,CCCc1cc(=O)oc2c3c(c4c(c12)OC(C)(C)C=C4)OC(C)C(C)(C)C3O,0.1519,Low similarity (0.152): Major reconstruction errors.
+328,O=C(c1ccc(Cl)c(S(=O)(=O)N2CCCCCC2)c1)N1CCN(c2ccccc2O)CC1,O=C(c1ccc(Cl)cc1)C(O)(Cn1cncn1)c1ccc(Cl)cc1,0.1579,Low similarity (0.158): Major reconstruction errors.
+339,CCCOC(=O)c1cc(OC)c(CC(C)N)cc1OC,CCCc1cc(=O)oc2c3c(c4c(c12)OC(C)(C)C=C4)OC(C)C(C)(C)C3O,0.1235,Low similarity (0.123): Major reconstruction errors.

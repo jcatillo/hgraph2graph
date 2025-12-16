@@ -2,9 +2,18 @@ import argparse
 import os
 from pathlib import Path
 import pandas as pd
+
+# --- FIX START ---
+# Delete the conflicting 'MPLBACKEND' environment variable set by interactive environments (like Colab),
+# which causes a ValueError when trying to import matplotlib before the script can set 'Agg'.
+if 'MPLBACKEND' in os.environ:
+    del os.environ['MPLBACKEND']
+    
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+# --- FIX END ---
+
 from rdkit import Chem
 from rdkit.Chem import AllChem
 

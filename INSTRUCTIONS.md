@@ -93,7 +93,7 @@ pip install -e .
 ```bash
 python Part_A/evaluate.py \
     --vocab data/Finals/vocab.txt \
-    --model ckpt/Finals-ckpt/model.ckpt.2000 \
+    --model ckpt/Finals-ckpt/model.ckpt.7600 \
     --test data/Finals/test.txt \
     --output_dir ./Part_A
 ```
@@ -196,7 +196,7 @@ Ensure the decoder has `probe_mode=True` support in `hgraph/decoder.py`. This fl
 ```bash
 python Part_C/probe_experiment.py \
     --vocab data/Finals/vocab.txt \
-    --model ckpt/Finals-ckpt/model.ckpt.2000 \
+    --model ckpt/Finals-ckpt/model.ckpt.7600 \
     --test_data data/Finals/test.txt \
     --output_dir ./Part_C
 ```
@@ -272,7 +272,7 @@ This creates:
 # Part A: Inference evaluation
 python Part_A/evaluate.py \
     --vocab data/Finals/vocab.txt \
-    --model ckpt/Finals-ckpt/model.ckpt.2000 \
+    --model ckpt/Finals-ckpt/model.ckpt.7600 \
     --test data/Finals/test.txt
 
 # Part B: Checkpoint dynamics
@@ -284,7 +284,7 @@ python Part_B/evaluate_part_b.py \
 # Part C: Decoder localization
 python Part_C/probe_experiment.py \
     --vocab data/Finals/vocab.txt \
-    --model ckpt/Finals-ckpt/model.ckpt.2000 \
+    --model ckpt/Finals-ckpt/model.ckpt.7600 \
     --test_data data/Finals/test.txt
 
 # Visualize Part C results
@@ -298,7 +298,7 @@ python Part_C/visualize_probe.py \
 ```bash
 #!/bin/bash
 VOCAB="data/Finals/vocab.txt"
-MODEL="ckpt/Finals-ckpt/model.ckpt.2000"
+MODEL="ckpt/Finals-ckpt/model.ckpt.7600"
 TEST="data/Finals/test.txt"
 CKPT_DIR="ckpt/Finals-ckpt"
 

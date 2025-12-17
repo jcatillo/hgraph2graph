@@ -64,7 +64,7 @@ def plot_heatmap(df: pd.DataFrame, out_path: str) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Visualize probe_experiment R² scores")
-    parser.add_argument("csv", help="Path to probe_results.csv")
+    parser.add_argument("--csv", help="Path to probe_results.csv")
     parser.add_argument("--outdir", default=None, help="Directory to save figures (default: same as CSV)")
     args = parser.parse_args()
 

@@ -1,6 +1,6 @@
 # Hierarchical Generation of Molecular Graphs using Structural Motifs
 
-For Detailed Instructions: Visitt ./INSTRUCTIONS.md
+For Detailed Instructions: Visit: (INSTRUCTIONS.md)
 
 Our paper is at https://arxiv.org/pdf/2002.03230.pdf
 
